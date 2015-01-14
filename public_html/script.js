@@ -5,9 +5,9 @@
  */
 
 $("document").ready(function(){
-    $(".oranges").css("background-color", "yellow");
+    $(".oranges").css("background-color", "cyan");
     
-    $("p").css("color", "blue");
+    $("p").css("color", "black");
     
     //$("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     
@@ -18,14 +18,27 @@ $("document").ready(function(){
     $('#addPara').bind('click', addAPara);
     $('#removePara').bind('click', removeAPara);
     
+    $('#hide').bind('click', hideThePage);
+    $('#show').bind('click', showThePage);
 });
+
+function hideThePage(){
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
+}
+
+function showThePage(){
+    $('div').show('fold', {}, 1500);
+    $('#show').hide('puff', {}, 1500);
+}
 
 function removeAPara(){
     $('#randPara p:last').remove();
 }
 
 function addAPara(){
-    $('#addPara').append('<p>ADDED</p>');
+    $('#randPara').append('<p>ADDED</p>');
 }
 
 function replaceWText(){
@@ -42,7 +55,7 @@ function mouseOverMe (){
 
 function mouseClick (){
     
-    $("p").html("Clicked!!!!!!!!!!!!!!!!!!!!!!!!!")
+    $("p").html("IM BLUE BA DA BEE DA BOO DA BA DA BEE DA BOO DA ")
 }
 
 function addAPara() {
