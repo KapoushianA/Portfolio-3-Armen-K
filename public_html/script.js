@@ -5,21 +5,24 @@
  */
 
 $("document").ready(function(){
-    $(".oranges").css("background-color", "cyan");
-    
+    $(".oranges").css("background-color", "cyan"); 
     $("p").css("color", "black");
     
     //$("h1").bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
     
-    $("h1").bind("click", mouseClick);
-    
+    $("h1").bind("click", mouseClick);   
     
     $('#replaceWText').bind('click', replaceWText);
     $('#addPara').bind('click', addAPara);
-    $('#removePara').bind('click', removeAPara);
+    $('#removePara').bind('click', removeAPara);   
     
     $('#hide').bind('click', hideThePage);
     $('#show').bind('click', showThePage);
+    
+    $('#superHumans').accordion({header: "h3"});
+    $('#superHumans').css('width', '400px');
+    
+    $('h3').css('background', 'cyan');
 });
 
 function hideThePage(){
@@ -54,8 +57,7 @@ function mouseOverMe (){
 }
 
 function mouseClick (){
-    
-    $("p").html("IM BLUE BA DA BEE DA BOO DA BA DA BEE DA BOO DA ")
+    $("p").html("IM BLUE BA DA BEE DA BOO DA BA DA BEE DA BOO DA ");
 }
 
 function addAPara() {
